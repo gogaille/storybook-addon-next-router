@@ -2,19 +2,22 @@
 
 Use Next.js Router in your Storybook stories.
 
+This is a fork of the `storybook-addon-next-router` library. It fix the compatibility with next v11.2+.
+
 ## Versions
 
-- Use 1.x if you're using storybook 5.x
-- Use 2.x if you're using storybook 6.x
+- Use `storybook-addon-next-router` 1.x if you're using storybook 5.x
+- Use `storybook-addon-next-router` 2.x if you're using storybook 6.x
+- Use `@gogaille/storybook-addon-next-router` 4.x if you're using storybook 6.x and next 11.2+
 
 ## As a decorator in a story
 
 ```jsx
-import { withNextRouter } from "storybook-addon-next-router";
-import MyComponentThatHasANextLink from "../component-that-has-a-next-link";
+import { withNextRouter } from 'storybook-addon-next-router';
+import MyComponentThatHasANextLink from '../component-that-has-a-next-link';
 
 export default {
-  title: "My Story",
+  title: 'My Story',
   decorators: [withNextRouter], // not necessary if defined in preview.js
 };
 
@@ -25,10 +28,10 @@ export const Example = () => <MyComponentThatHasANextLink />;
 Example.story = {
   parameters: {
     nextRouter: {
-      path: "/profile/[id]",
-      asPath: "/profile/lifeiscontent",
+      path: '/profile/[id]',
+      asPath: '/profile/lifeiscontent',
       query: {
-        id: "lifeiscontent",
+        id: 'lifeiscontent',
       },
     },
   },
@@ -62,8 +65,7 @@ export decorators = [
 ];
 ```
 
-
-if you set up `withNextRouter` in preview, it will not need to be added to the `decorators` key in each story, consider doing this if you have a lot of stories that depend on Apollo.
+If you set up `withNextRouter` in preview, it will not need to be added to the `decorators` key in each story, consider doing this if you have a lot of stories that depend on Apollo.
 
 Read more about the options available for next/router at https://nextjs.org/docs/api-reference/next/router
 

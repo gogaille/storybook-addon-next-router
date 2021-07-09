@@ -6,16 +6,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lifeiscontent/storybook-addon-next-router.git"
+    "url": "https://github.com/gogaille/storybook-addon-next-router.git"
   },
   "devDependencies": {
     "@babel/core": "7.14.6",
-    "@storybook/addon-actions": "6.3.2",
-    "@storybook/addons": "6.3.2",
+    "@storybook/addon-actions": "6.3.4",
+    "@storybook/addons": "6.3.4",
     "@types/jest": "26.0.24",
     "babel-jest": "27.0.6",
+    "browserslist": "^4.16.6",
     "husky": "^7.0.0",
-    "next": "11.0.1",
+    "next": "11.0.2-canary.9",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "tsdx": "0.14.1",
@@ -32,11 +33,11 @@
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/storybook-addon-next-router.esm.js",
-  "name": "storybook-addon-next-router",
+  "name": "@gogaille/storybook-addon-next-router",
   "peerDependencies": {
     "@storybook/addon-actions": "^6.0.0",
     "@storybook/addons": "^6.0.0",
-    "next": "^9.0.0 || ^10.0.0 || ^11.0.0",
+    "next": "^11.2.0",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0"
   },
@@ -54,11 +55,15 @@
     "prepare": "tsdx build && husky install"
   },
   "typings": "dist/index.d.ts",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "keywords": [
     "storybook-addon",
     "data-state",
-    "popular"
+    "popular",
+    "storybook",
+    "next",
+    "next.js",
+    "nextjs"
   ],
   "description": "Use Next.js Router in your Storybook stories.",
   "storybook": {
